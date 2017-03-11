@@ -1,26 +1,18 @@
 /*
 * Define our global vars and any other setup elements.
-*
-* TODO: Handle multi-region in some manner
 */
 variable "aws_profile" {}
 
 variable "aws_account" {}
 
-variable "aws_account_id" {}
+variable "aws_region" {}
 
-variable "aws_region" {
-  default = "us-east-1"
-}
-
-# FIXME: replace hard coding with an aws provider var if I can figure out how
-# to limit the list size.
-variable "aws_availability_zones" {
-  default = ["us-east-1a", "us-east-1b", "us-east-1c"]
-}
+# FIXME: Would like to replace this with a query if we could also limit the
+# length of the list.  Wanted to just use the first three AZs of the region.
+variable "aws_availability_zones" { type = "list" }
 
 
-# VPC setup
+// VPC setup
 variable "vpc_cidr_block" {
   type = "string"
   description = "CIDR block fro public VPC"

@@ -7,16 +7,17 @@ terragrunt = {
     backend = "s3"
     config {
       encrypt = "true"
-      bucket  = "straycat-dhs-org-straycat-terraform"
+      bucket  = "example-com-example-prod-terraform"
       key     = "aws_vpc.tfstate"
       region  = "us-east-1"
     }
   }
 }
 
-aws_profile = "straycat"                # AWS credentials profile name
-aws_account = "straycat"                # AWS account name
-aws_account_id = ""                     # AWS account ID
+aws_profile = "example-prod"     # AWS credentials profile name
+aws_account = "example-prod"     # AWS account name
+aws_region  = "us-east-1"
+aws_availability_zones = ["us-east-1a", "us-east-1b", "us-east-1c"]
 
 # VPC
 vpc_cidr_block      = "10.1.0.0/16"

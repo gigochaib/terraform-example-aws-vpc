@@ -1,5 +1,5 @@
-# straycat-terraform-aws-vpc
-The Straycat AWS VPC
+# terraform-example-aws-vpc
+An example AWS VPC.
 
 ## Configuration
 This service requires the following data to create a VPC.
