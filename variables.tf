@@ -1,6 +1,7 @@
 /*
 * Define our global vars and any other setup elements.
 */
+variable "aws_secretsfile" {}
 variable "aws_profile" {}
 
 variable "aws_account" {}
